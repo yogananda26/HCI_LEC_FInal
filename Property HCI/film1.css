@@ -1,0 +1,404 @@
+@font-face {
+    font-family: "ghoflix_font";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-Medium.otf);
+}
+@font-face {
+    font-family: "ghoflix_font_bold";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-BoldExt.otf);
+}
+
+
+* {
+
+    margin: 0;
+    /* padding: auto; */
+    box-sizing: border-box;
+    padding-inline-start: 0px;
+}
+a {
+
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-family: "ghoflix_font";
+}
+
+body {
+
+    overflow-x: hidden;
+    opacity: 1; 
+}
+
+h2{
+    color: white;
+    font-size: 1.2rem;
+    font-family: "ghoflix_font_bold";
+    padding: 2% 0% 2% 2% ;
+
+}
+
+.header{ 
+    position:fixed;
+    display: flex;
+    justify-content:space-between;
+    width: 100vw; 
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.89);
+    z-index: 999;
+    
+}
+.header img{ 
+    height: 100%;
+    width: 15%;
+    object-position: 0% 55%;
+    object-fit: cover;
+}
+.left_header{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.left_second_container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.left_header p{
+    font-size: 1.25rem;
+    font-family: "ghoflix_font";
+    color:white;
+    padding: 10px;
+}
+.left_header_gabung{ 
+    width: 40%;
+    height: 80%; 
+    margin: 0px 10px 0px 10px;
+    background-color: red;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ghoflix_font"
+}
+.left_header_gabung p {
+    font-size: 0.90rem;
+}
+
+.left_header_masuk{
+    width: 40%;
+    height: 80%;
+    margin: 0px 10px 0px 10px;   
+    border-radius: 6px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ghoflix_font";
+    border-style: solid;
+    border-color: white;
+}
+.left_header_masuk p {
+    font-size: 0.90rem;
+}
+
+/* this is for jumbotron */
+.jumbotron1{
+    background: #181818;
+    margin: 0 auto;
+    max-width: 1700px;
+    width: 100vw;
+    height: 110vh;
+    padding: 25px 5vw;
+    position: relative;
+}
+.hero_image{
+    background-image: url("Assets/film1.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% -20%;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    right: -6%;
+    top:2%;
+    width: 105%;
+}
+.hero_image::after{
+    background: linear-gradient(0deg,#181818 0,hsla(0,0%,9%,.987) 1.62%,hsla(0,0%,9%,.951) 3.1%,hsla(0,0%,9%,.896) 4.5%,hsla(0,0%,9%,.825) 5.8%,hsla(0,0%,9%,.741) 7.06%,hsla(0,0%,9%,.648) 8.24%,hsla(0,0%,9%,.55) 9.42%,hsla(0,0%,9%,.45) 10.58%,hsla(0,0%,9%,.352) 11.76%,hsla(0,0%,9%,.259) 12.94%,hsla(0,0%,9%,.175) 14.2%,hsla(0,0%,9%,.104) 15.5%,hsla(0,0%,9%,.049) 16.9%,hsla(0,0%,9%,.013) 18.38%,hsla(0,0%,9%,0) 20%);
+    content: "";
+    height: 100%;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.hero_container_info{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    min-width: 500px;
+    padding: 16px 32px 64px 0;
+    position: relative;
+    width: 35%;
+    z-index: 2;
+}
+.info_container::after{
+    content: "";
+    position:absolute;
+    background: linear-gradient(90deg,#181818 10%,hsla(0,0%,9%,.98) 20%,
+    hsla(0,0%,9%,.97) 25%,hsla(0,0%,9%,.95) 35%,hsla(0,0%,9%,.94) 40%,
+    hsla(0,0%,9%,.92) 45%,hsla(0,0%,9%,.9) 50%,hsla(0,0%,9%,.87) 55%,
+    hsla(0,0%,9%,.82) 60%,hsla(0,0%,9%,.75) 65%,hsla(0,0%,9%,.63) 70%,
+    hsla(0,0%,9%,.45) 75%,hsla(0,0%,9%,.27) 80%,hsla(0,0%,9%,.15) 85%,
+    hsla(0,0%,9%,.08) 90%,hsla(0,0%,9%,.03) 95%,hsla(0,0%,9%,0));
+    bottom: 0px;
+    left :0px;
+    right:-200px;
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+}
+.info_container img{ 
+    position:relative;
+    width: 90%;
+}
+.details_info_movie{
+    position:relative;
+    padding-top: 20px;
+}
+.details_info_movie h1{
+    color:white;
+    font-family: "ghoflix_font";
+    font-size: 25px;
+    font-stretch :wider;
+}
+.tittle_info_movie{
+    padding-top: 10px;
+    color: #a3a3a3;
+    /* display: inline-block; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    font-family: "ghoflix_font";
+}
+.maturerity_number{
+    border: 1px solid #a3a3a3;
+    padding: 0px 5px;
+}
+.tittle_info_movie .separator{
+    padding: 0px 5px;
+}
+.tittle_sinopsis{
+    padding-top: 20px;
+    color:rgb(229, 229, 229);
+    font-family: "ghoflix_font";
+}
+.tittle_info_talent{
+    padding-top: 20px;
+}
+.tittle_info_talent .starring{
+    color: #a3a3a3;
+    font-family: "ghoflix_font";
+    padding-right: 5px;
+}
+.tittle_info_talent .talent{
+    color:rgb(229, 229, 229);
+    font-family: "ghoflix_font";
+}
+
+.suggestion{
+    position:relative;
+    width: 100vw;
+    height:72vh;
+    background-color: #181818;
+}
+
+.producer_hero{
+    padding:  25px 10vh;
+    height: 150px;
+    position: relative;
+    background-color: #181818;
+}
+.separator_pro{
+    width: 100%;
+    border-bottom: 1px solid rgb(112, 111, 111);
+    
+}
+
+.produser_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.producer_name{
+    width: 100%;
+    height: 100%;
+    margin: 0px 400px;
+    font-family: "ghoflix_font";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a3a3a3;
+    text-align: center;
+}
+
+/* this is for more details */
+.more_detail{
+    position: relative;
+    height: auto;
+    width: 100%; 
+    padding:  10px 10vh;
+
+}
+.more_detail p{
+    font-family: "ghoflix_font";
+    color: #dedddd;
+    font-size: 28px;
+}
+.detail_info_more{
+    display: grid;
+    grid-template-columns: 33.333%  33.333%  33.333%;
+}
+
+
+.section_watch_offline{
+    height: auto;
+    max-width: 100%;
+}
+.header_section_watch{
+    font-size: 18px;
+    color: #a3a3a3;
+    padding-top: 25px;
+    font-family: "ghoflix_font";
+}
+.contain_section_watch{
+    font-size: 15px;
+    color: #dedddd;
+    padding-top: 7px;
+    font-family: "ghoflix_font";
+}
+
+.section_genres_more{
+    height: auto;
+    max-width: 100%;
+}
+.section_feeling_this_movie{
+    height: auto;
+    max-width: 100%;
+}
+.section_audio{
+    height: auto;
+    max-width: 100%;
+}
+.section_subtittles{
+    height: auto;
+    max-width: 100%;
+}
+
+.cast_container{
+    position: relative;
+    height: auto;
+    width: 100%; 
+    padding:  20px 10vh;
+    font-size: 18px;
+    color: #a3a3a3;
+    font-family: "ghoflix_font";
+}
+.header_cast{
+    padding: 10px 0px 10px 0px;
+}
+.cast_name{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    font-size: 15px;
+    font-family: "ghoflix_font";
+    color: #dedddd;
+}
+
+.recomendded_movie{
+    height: 170vh;
+    width: 100vw;
+    background-color: #181818;
+    padding:  25px 10vh;
+}
+.header_recommendded_movie{
+    padding: 20px 0px 20px 0px;
+}
+.header_recommendded_movie span{
+    font-size: 28px;
+    font-family: "ghoflix_font";
+    color: #dedddd;
+}
+.movie_container{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+.movie_hold{
+    padding: 10px 15px 10px 0px;
+    max-width: 100%;
+    height: auto;
+}
+.movie_hold a{
+    position: relative; 
+    max-width: 100%;
+}
+.movie_container img{
+    width: 100%;
+}
+
+footer{
+    height: 60vh;
+    width: 100vw;
+    background-color:181818; 
+}
+.footer_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container_social_media{
+    width: 1500px;
+    height: 400px;
+    background-color: 181818;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container_social_media img{
+    height: 100px;
+}
+.link_social_media{ 
+    height: 20px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description_footer{
+    height: 200px;
+    width: 700px;
+    color: rgb(112, 111, 111);
+    padding: 50px;
+    font-family: "ghoflix_font";
+    text-align: center;
+    /* background-color: white; */
+}
+.container_social_media h4{
+    color: rgb(112, 111, 111);
+    font-family: "ghoflix_font";
+}

@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "ghoflix_font";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-Medium.otf);
+}
+@font-face {
+    font-family: "ghoflix_font_bold";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-BoldExt.otf);
+}
+
+
+* {
+
+    margin: 0;
+    /* padding: auto; */
+    box-sizing: border-box;
+    padding-inline-start: 0px;
+}
+a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-family: "ghoflix_font";
+}
+
+body {
+    overflow-x: hidden; 
+}
+
+.header{
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navigation{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+    padding: 30px;
+    font-size: 20px;
+    font-family: "ghoflix_font";
+
+}
+.header img{
+    height: 100px;
+}
+.rincian_keanggotaan{
+    position: relative; 
+    display:flex;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+}
+.rincian{
+    height: 100px;
+    width: 300px;
+    /* padding-right: 50px;
+    padding-top: 20px; */
+    text-align: center;
+    font-family: "ghoflix_font";
+    font-size: 20px;
+    color: rgb(112, 111, 111);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+}
+.rincian_more{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid rgb(162, 162, 162);
+  
+}
+.rincian1{
+    display: flex;
+    flex-direction: row;
+    font-family: "ghoflix_font";
+    padding-left: 70px;
+}
+.rincian1 .box{
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.rincian1 .box1{
+    height: 30px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rincian1 .box2{
+    height: 30px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rincian2 h3{
+    padding: 5px;
+    color: rgb(77, 77, 248);
+    text-align: end;
+}
+.metode_pembayaran{
+    position: relative; 
+    display:flex;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+}
+
+.rincian_membership{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 20px 70px;
+}
+.rincian_membership h3{
+    color: rgb(77, 77, 248);
+}
+.rincian_membership .img_pos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rincian_membership img{
+    height: auto; 
+    width: 100px; 
+}
+
+.profile_saya{
+    position: relative; 
+    display:flex;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+}
+.profile1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 70px;
+    padding-bottom: 20px;
+
+}
+.profile1 img{
+    width: 60px;
+    height: auto;
+}
+.profile_more{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+.profile_more a{
+    padding: 20px 0px 0px 0px;
+}
+.profile_more1{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.profile_more1 h3{
+    padding: 5px;
+    color: rgb(77, 77, 248);
+}
+
+.hadiah_dan_penawaran{
+    position: relative; 
+    display:flex;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+}
+.hadiah_more{
+    display: flex;
+    width: 550px;
+    flex-direction: row;
+    padding-left: 70px;
+    justify-content: space-between;
+    
+}
+.search_box{
+    height: 50px;
+    width: 350px;
+    border: 2px solid  rgb(162, 162, 162);
+    border-radius: 9px;
+    font-family: "ghoflix_font";
+    font-size: 20px;
+    color: rgb(162, 162, 162);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    height: 50px;
+    width: 115px;
+    font-family: "ghoflix_font";
+    background-color:  rgb(162, 162, 162);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
+
+
+

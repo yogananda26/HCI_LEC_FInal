@@ -1,0 +1,46 @@
+*{
+    padding: auto;
+   
+}
+
+body{
+    display:flex;
+
+}
+.parent{
+    position:relative;
+    top:100px;
+    left: 100px;
+    background-color:black;
+    width: 500px;
+    height: 500px
+}   
+
+.child1{
+    position: relative;
+    display:flex; 
+    justify-content : center;
+    align-items : center;
+    background-color: red;
+    width: 100%;
+    height:100%;
+    z-index:-1;
+}
+
+.second_child{
+    position: relative;
+    background-color: blue;
+    opacity:20%;
+    width: 100%;
+    height:100%;
+}
+
+.last_child{
+    padding:20px;
+    background-color: yellow;
+    width: 10%;
+    height:10%;
+}
+
+
+

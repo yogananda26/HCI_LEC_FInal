@@ -1,0 +1,557 @@
+
+@font-face {
+    font-family: "ghoflix_font";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-Medium.otf);
+}
+@font-face {
+    font-family: "ghoflix_font_bold";
+    src: url(./font/helvetica-neue-55-cufonfonts/HelveticaNeue-BoldExt.otf);
+}
+
+
+* {
+
+    margin: 0;
+    /* padding: auto; */
+    box-sizing: border-box;
+    padding-inline-start: 0px;
+}
+a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-family: "ghoflix_font";
+}
+
+body {
+    overflow-x: hidden;
+    opacity: 1; 
+
+}
+
+h2{
+    color: white;
+    font-size: 1.2rem;
+    font-family: "ghoflix_font_bold";
+    padding: 2% 0% 2% 2% ;
+
+}
+
+.header{ 
+    position:fixed;
+    display: flex;
+    justify-content:space-between;
+    width: 100vw; 
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.89);
+    z-index: 999;
+    
+}
+.header img{ 
+    height: 100%;
+    width: 15%;
+    object-position: 0% 55%;
+    object-fit: cover;
+}
+.more_in_humberger{
+    top: 0px;
+    position: absolute; 
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+    transform: 300ms ease-in-out;
+}
+.more_in_humberger.is-active{
+    z-index : 1; 
+}
+.more_in_humberger.is-active a:hover{
+    color:rgb(188, 188, 188);
+}
+.more_more{
+    position: relative;
+    display: flex;
+    flex-direction: column;     
+}
+.bottom_list_more{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.more_more li{
+    margin: 30px 50px 10px 30px;
+    font-size: 23px;
+    text-transform: none;
+}
+.bottom_list_more li{
+    font-size: 19px;
+}
+.left_header{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.left_second_container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.left_header p{
+    font-size: 1.25rem;
+    font-family: "ghoflix_font";
+    color:white;
+    padding: 10px;
+}
+.left_header_gabung{ 
+    width: 40%;
+    height: 80%; 
+    margin: 0px 10px 0px 10px;
+    background-color: red;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ghoflix_font"
+}
+.left_header_gabung p {
+    font-size: 0.90rem;
+}
+
+.left_header_masuk{
+    width: 40%;
+    height: 80%;
+    margin: 0px 10px 0px 10px;   
+    border-radius: 6px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ghoflix_font";
+    border-style: solid;
+    border-color: white;
+}
+.left_header_masuk p {
+    font-size: 0.90rem;
+}
+
+/* this is for jumbotron */
+.jumbotron1{
+    position:relative;
+    height: 93vh;
+    width: 100vw;
+    display:flex;
+    justify-content: end;
+    
+}
+.jumbotron1 video{
+    top: -7px;
+    position: absolute;
+    height: auto;
+    width: 100%;
+}
+@media (min-aspect-ratio : 16/9) {
+    .jumbotron1 video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio : 16/9) {
+    .jumbotron1 video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.age_restricted{
+    position:absolute; 
+    height: 50px;
+    width: 130px;
+    bottom: 100px;
+    background-color: 454142;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.age_restricted h2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.age_restricted::before{
+    content: ''; 
+    position:absolute;
+    height: 50px;
+    width: 6px;
+    background-color: white;
+}
+
+.content_jumbotron1{
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0% 0% 3%;
+}
+.humberger{
+    position: relative;
+    width: 40px;
+    display: block;
+
+    cursor:pointer; 
+    appearance: none;
+    background: none;
+    border:none; 
+    outline: none;
+    margin-bottom: 50px;
+   
+}
+.humberger .but, .humberger::after, .humberger::before{
+    content: '';
+    display: block;
+    margin: 5px 0px;
+    width: 100%; 
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    transition: 0.4s ease-in-out;
+}
+.humberger.is-active{
+    z-index: 1;
+}
+.humberger.is-active::before{
+    transform: rotate(-45deg) translate(-8px, 9px);
+}
+.humberger.is-active::after{
+    transform: rotate(45deg) translate(-4px, -5px);
+}
+.humberger.is-active .but{
+    opacity: 0;
+}
+
+.more_list{
+    position: relative;
+    margin: 100px;
+    height: 600px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.tittle{
+    position: relative;
+    height: 35%;
+    width: 100%; 
+    margin-bottom: 10%;
+}
+.tittle p{
+    width: 50%;
+    text-align: center;
+    font-family: "ghoflix_font";
+    font-stretch: extra-expanded;
+    color:white;
+    font-size: 4rem;
+}
+.description{ 
+    position: relative; 
+    height: 15%;
+    width: 100%;
+}
+.description p{
+    width: 50%;
+    height: 100%;
+    text-align: start;
+    font-family: "ghoflix_font";
+    font-stretch: extra-expanded;
+    color:white;
+    font-size: 1rem;
+}
+.play_button{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.play1{
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.play1_img{
+    background-image: url("./Assets/play_button.png");
+    height: 50px;
+    width: 40px;
+    left: 6%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.play1 a{
+    font-family: "ghoflix_font_bold";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: black;
+}
+.play2{
+    height: 53px;
+    width: 220px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.play2_img{
+    height: 100%;
+    width:20%;
+    background-image: url("./Assets/info_logo_white.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.play2 a{
+    font-family: "ghoflix_font_bold";
+    margin-left:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 1.1rem;
+}
+.last_content{
+    position:relative;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "ghoflix_font_bold";
+    padding-bottom: 4%;
+}
+.content{
+    position: relative;
+    height: 220vh;
+    width : 100vw;
+    background-color : #181818;
+}
+.container_slider{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    
+}
+.content_horizontal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 30vh;
+    padding: 0% 1.5% 0% 0.3%;
+    margin: 0% 0.75% 5% 0%;
+}
+.prev_button{
+    /* position: absolute; */
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height:100%;
+    padding-right: 4px;
+    /* left: 20px; */
+    z-index: 2;
+}
+.prev_button img{
+    height: 15px;
+    transform: rotate(90deg);
+}
+.next_button{
+    /* position: absolute; */
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height:100%;
+    padding-left:8px;
+    /* top:70px; */
+    /* right: 10px; */
+    z-index: 2;
+}
+.next_button img{
+    height: 15px;
+    transform: rotate(270deg);
+}
+.content_slider{ 
+    position: relative;
+    width: 100%;
+    height: relative;
+    overflow-x: scroll;
+}
+.content_slider::-webkit-scrollbar{
+    display: none;
+}
+.movie_content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 200vw;
+    height: 30vh;
+    /* transform: translateX(-0px); */
+    transition: 700ms ease-in-out;
+
+}
+.real_content_movie{ 
+    position: relative;
+    height: 200px;
+    width: 310px;
+    /* background-color:white; */
+}
+.more_detail_info{
+    height: 200px;
+    width:310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: "ghoflix_font";
+    font-size: 1.1rem;
+}
+
+.more_detail_info .name_movie{
+    margin-top: 10px;
+}
+/*  2 */
+.movie_content1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 200vw;
+    height: 30vh;
+    /* transform: translateX(-0px); */
+    transition: 700ms ease-in-out;
+
+}
+
+/* 3 */
+.movie_content2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 200vw;
+    height: 30vh;
+    /* transform: translateX(-0px); */
+    transition: 700ms ease-in-out;
+}
+/* 4 */
+.movie_content3{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 200vw;
+    height: 30vh;
+    /* transform: translateX(-0px); */
+    transition: 700ms ease-in-out;
+
+}
+/* 5 */
+.movie_content4{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 200vw;
+    height: 30vh;
+    /* transform: translateX(-0px); */
+    transition: 700ms ease-in-out;
+
+}
+
+footer{
+    height: 60vh;
+    width: 100vw;
+    background-color:181818; 
+}
+.footer_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container_social_media{
+    width: 1500px;
+    height: 400px;
+    background-color: 181818;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container_social_media img{
+    height: 100px;
+}
+.link_social_media{ 
+    height: 20px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description_footer{
+    height: 200px;
+    width: 700px;
+    color: rgb(112, 111, 111);
+    padding: 50px;
+    font-family: "ghoflix_font";
+    text-align: center;
+    /* background-color: white; */
+}
+.container_social_media h4{
+    color: rgb(112, 111, 111);
+    font-family: "ghoflix_font";
+}
+/* pngwing 1 */
+
+
+
+
