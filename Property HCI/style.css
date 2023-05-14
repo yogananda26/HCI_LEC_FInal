@@ -1,11 +1,11 @@
 @font-face {
     font-family: "ghoflix_font";
-    src: url("HelveticaNeue-Medium.otf");
+    src: url("./HelveticaNeue-Medium.otf");
 }
 
 @font-face {
     font-family: "ghoflix_font_bold";
-    src: url("HelveticaNeue-BoldExt.otf");
+    src: url("./HelveticaNeue-BoldExt.otf");
 }
 
 * {
